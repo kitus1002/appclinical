@@ -520,7 +520,7 @@ export default function PatientsPage() {
               <h1 className="text-4xl font-black tracking-tight text-white uppercase">Gestión Clínica <span className="text-blue-500 font-bold ml-2">PRO</span></h1>
               <p className="text-slate-500 font-medium tracking-wide">Base de datos centralizada con cumplimiento normativo y expedientes detallados.</p>
            </div>
-           <Button onClick={() => { setFormData({ id: "", nombre: "", telefono: "", email: "", fecha_nacimiento: "", genero: "otro", direccion_completa: "", alergias: "", antecedentes_patologicos: "", tipo_sangre: "", contacto_emergencia_nombre: "", contacto_emergencia_telefono: "", peso_kg: 0, talla_cm: 0, sexo_biologico: "masculino", saldo_inicial: 0 }); setIsModalOpen(true); }} className="bg-white text-slate-950 px-10 py-8 rounded-[2rem] font-black text-lg shadow-2xl transition-all hover:scale-105 active:scale-95 group">
+           <Button onClick={() => { setFormData({ id: "", nombre: "", telefono: "", email: "", fecha_nacimiento: "", genero: "otro", direccion_completa: "", alergias: "", antecedentes_patologicos: "", tipo_sangre: "", contacto_emergencia_nombre: "", contacto_emergencia_telefono: "", peso_kg: 0, talla_cm: 0, sexo_biologico: "masculino", saldo_inicial: 0, limite_credito: 0 }); setIsModalOpen(true); }} className="bg-white text-slate-950 px-10 py-8 rounded-[2rem] font-black text-lg shadow-2xl transition-all hover:scale-105 active:scale-95 group">
               <PlusCircle className="h-6 w-6 mr-3 group-hover:rotate-90 transition-all" /> Nuevo Registro
            </Button>
         </header>
