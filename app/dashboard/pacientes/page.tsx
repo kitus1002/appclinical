@@ -66,10 +66,15 @@ const pdfStyles = StyleSheet.create({
     alignItems: 'center' 
   },
   logo: { width: 70, height: 70, borderRadius: 12 },
-  clinicName: { fontSize: 22, fontWeight: 'black', color: '#FFFFFF', textTransform: 'uppercase', letterSpacing: 1 },
+  clinicNameWhite: { fontSize: 22, fontWeight: 'black', color: '#FFFFFF', textTransform: 'uppercase', letterSpacing: 1 },
   clinicInfoWhite: { color: '#e2e8f0', fontSize: 8, marginTop: 2 },
   
-  header: { borderBottom: 1, borderColor: '#e2e8f0', paddingBottom: 15, marginBottom: 20, flexDirection: 'row', justifyContent: 'space-between' },
+  header: { borderBottom: 2, borderColor: '#1e1b4b', paddingBottom: 15, marginBottom: 20, flexDirection: 'row', justifyContent: 'space-between' },
+  clinicName: { fontSize: 20, fontWeight: 'black', color: '#1e1b4b', textTransform: 'uppercase' },
+  clinicInfo: { color: '#64748b', fontSize: 10, marginTop: 2 },
+  text: { fontSize: 10, color: '#1e293b', lineHeight: 1.5 },
+  tableCol: { fontSize: 10, color: '#1e293b' },
+  legalNote: { fontSize: 8, color: '#94a3b8', textAlign: 'center', fontStyle: 'italic', marginTop: 10 },
   
   docBox: { marginBottom: 25, padding: 15, backgroundColor: '#f8fafc', borderRadius: 12, borderLeft: 4, borderLeftColor: '#4f46e5' },
   docName: { fontSize: 16, fontWeight: 'bold', color: '#1e293b' },
@@ -163,7 +168,7 @@ const RecipePDF = ({ recipe, doctor, clinic, patient }: any) => {
         {/* PREMIUM BANNER HEADER */}
         <View style={pdfStyles.headerBanner}>
           <View style={{ flex: 1 }}>
-            <Text style={pdfStyles.clinicName}>{clinic?.nombre || "AppClínica Premium"}</Text>
+            <Text style={pdfStyles.clinicNameWhite}>{clinic?.nombre || "AppClínica Premium"}</Text>
             <Text style={pdfStyles.clinicInfoWhite}>{clinic?.direccion_fisica || "Sede No Registrada"}</Text>
             <Text style={pdfStyles.clinicInfoWhite}>T. {clinic?.telefono_contacto || "N/A"} | {clinic?.email_contacto || "info@clinic.com"}</Text>
           </View>
